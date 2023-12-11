@@ -23,7 +23,7 @@ namespace EntityLayer.Entities
         public DateTime CheckInDate {  get; set; } 
         public DateTime CheckOutDate { get; set;}
         [ValidateNever]
-        public virtual List<Payment> Payment { get; set; }
+        public virtual List<Payment>? Payment { get; set; }
 
     }
 }

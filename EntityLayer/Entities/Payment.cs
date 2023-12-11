@@ -12,16 +12,17 @@ namespace EntityLayer.Entities
     {
         [Key]
         public int PaymentId {  get; set; }
+
         [ForeignKey("Customer")]
-        public int CustomerId {  get; set; }
+        public int? CustomerId {  get; set; }
         public virtual Customer? Customer { get; set; }
         [ForeignKey("Booking")]
-        public int BookingId {  get; set; } 
+        public int? BookingId {  get; set; } 
         public virtual Booking? Booking { get; set; }
         public string FirstName { get; set; }=string.Empty;
         public string LastName { get; set; } = string.Empty;
         public int CreditCardNo { get; set; }
-        public string ExpireDate {  get; set; }
+        public string ExpireDate { get; set; } = string.Empty;
 
     }
 }

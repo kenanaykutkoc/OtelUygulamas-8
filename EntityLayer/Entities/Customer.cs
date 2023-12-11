@@ -20,11 +20,11 @@ namespace EntityLayer.Entities
         public string State { get; set; } = string.Empty;
         public string PhoneNo { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
-        public string Password { get; set; }
+        public string Password { get; set; } = string.Empty;
 
         [ValidateNever]
-        public virtual List<Booking> Booking { get; set; }
+        public virtual List<Booking>? Booking { get; set; }
         [ValidateNever]
-        public virtual List<Payment> Payments { get; set; }
+        public virtual List<Payment>? Payments { get; set; }
     }
 }
